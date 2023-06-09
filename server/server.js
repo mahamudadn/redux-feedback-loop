@@ -3,12 +3,15 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 
+
 /** ---------- MIDDLEWARE ---------- **/
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+const feedbackRouter = require('./Router/Router.Feedback');
+app.use('/feedback', feedbackRouter)
 
 
 /** ---------- START SERVER ---------- **/
