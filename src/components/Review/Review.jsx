@@ -7,19 +7,12 @@ import { useHistory } from "react-router-dom";
 function Review() {
 
 
-
-
-
-
     const History = useHistory();
     const dispatch = useDispatch();
     const feelingReducer = useSelector(store => store.feelingReducer)
     const understandingReducer = useSelector(store => store.understandingReducer)
     const supportReducer = useSelector(store => store.supportReducer)
     const commentReducer = useSelector(store => store.commentReducer)
-
-
-
 
 
     const handleSubmit = (event) => {
@@ -36,7 +29,7 @@ function Review() {
 
         }) 
     }
-   
+
     
 
     return (
@@ -47,12 +40,11 @@ function Review() {
                     <tr >
                         <td>How you're feeling:</td>
                         <td>{feelingReducer}</td>
-                       
                     </tr>
                     <tr >
                         <td>How well you understand the material:</td>
                         <td>{understandingReducer}</td>
-                       
+
                     </tr>
                     <tr >
                         <td>How supported you feel:</td>
