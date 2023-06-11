@@ -15,7 +15,16 @@ function Success(params) {
         History.push('/')
     }
  
-    
+    return(
+
+        <>
+        
+        <h1>FEEDBACK SUCCESSFULL</h1>
+
+        <button onClick={Reset}> You Can Leave New feedback again</button>
+        
+        </>
+    )
 
 
 
