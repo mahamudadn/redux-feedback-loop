@@ -7,6 +7,7 @@ import UnderstandingInput from '../UnderstandingInput/UnderstandingInput';
 import SupportInput from '../SupportInput/SupportInput'
 import CommentInput from '../CommentInput/CommentInput'
 import Review from '../Review/Review'
+import Success from '../Success/Success';
 
 function App() {
 
@@ -42,8 +43,12 @@ function App() {
         <Route exact path='/review'>
           <Review/>
 
-
         </Route>
+
+        <Route exact path='/success'>
+        <Success/>
+
+      </Route>
 
 
       </Router>

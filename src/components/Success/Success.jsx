@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-function Success(params) {
+function Success() {
 
     const dispatch = useDispatch();
     const History = useHistory();
@@ -19,7 +19,7 @@ function Success(params) {
 
         <>
         
-        <h1>FEEDBACK SUCCESSFULL</h1>
+        <h1>You Sent Your Feedback</h1>
 
         <button onClick={Reset}> You Can Leave New feedback again</button>
         

@@ -25,7 +25,7 @@ function Review() {
             comments:commentReducer
         })
         .then (response => {
-            // History.push('/success')
+            History.push('/success')
 
         }) 
     }
