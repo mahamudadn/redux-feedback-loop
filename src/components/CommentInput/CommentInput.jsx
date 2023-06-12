@@ -10,11 +10,16 @@ function CommentInput() {
     const [comment, setComment] = useState(0)
 
     const handleComment = () => {
-        dispatch({
-            type:'GET_COMMENT',
-            payload: comment
-        })
-        History.push('/review')
+        if(!comment) {
+            alert('please input something')
+        } else {
+            dispatch({
+                type:'GET_COMMENT',
+                payload: comment
+            })
+            History.push('/review')
+        }
+    
     }
 
 

@@ -12,11 +12,17 @@ const History = useHistory()
 const [Understanding, setUnderstanding] = useState(0)
 
 const handleUnderstanding = () => {
-    dispatch({
-        type:'GET_UNDERSTANDING',
-        payload: Understanding
-    })
-    History.push('/Support')
+    if(!Understanding) {
+        alert('please input something')
+    } else {
+        dispatch({
+            type:'GET_UNDERSTANDING',
+            payload: Understanding
+        })
+        History.push('/Support')
+
+    }
+
 }
 
 

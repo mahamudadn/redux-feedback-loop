@@ -11,20 +11,26 @@ function FeelingInput() {
 
     const handleFeeling = () => {
         console.log('value of feeling is', feeling);
-        dispatch({
-            type: 'GET_FEELING',
-            payload: feeling
-        })
-
-        History.push('/Understanding')
+        if(!feeling) {
+            alert('Please input a value 1-5')
+        } else {
+            dispatch({
+                type: 'GET_FEELING',
+                payload: feeling
+            })
+    
+            History.push('/Understanding')
+        }
+        
     }
+
     return (
         <>
         <div>
             <h3>How are you Feeling today?</h3>
             <label htmlFor="Feeling">  Number between 1 and 5</label>
             <input
-               
+                required
                 type="number"
                 name="Feeling"
                 min="1"

@@ -7,7 +7,7 @@ import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 
 
-//Reducer
+//Reducers
 
 
 const feelingReducer = (state = [], action) => {
